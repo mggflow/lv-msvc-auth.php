@@ -16,6 +16,7 @@
         }
     ],
     "require": {
-        "laravel/framework": "^8.54"
+        "laravel/framework": "^8.54",
+        "mggflow/auth-base": "^2.0"
     }
 }
