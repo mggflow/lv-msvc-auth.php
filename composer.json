@@ -1,10 +1,10 @@
 {
-    "name": "mggflow/sample-library",
+    "name": "mggflow/lv-msvc-auth",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "MGGFLOW\\SampleLibrary\\": "src/"
+            "MGGFLOW\\MsvcAuth\\": "src/"
         }
     },
     "authors": [
@@ -17,6 +17,7 @@
     ],
     "require": {
         "laravel/framework": "^8.54",
-        "mggflow/auth-base": "^2.0"
+        "mggflow/auth-base": "^2.0",
+        "mggflow/exception-manager": "^3.1"
     }
 }
