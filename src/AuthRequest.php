@@ -56,7 +56,7 @@ class AuthRequest
         if ($validator->fails()) {
             throw ManageException::build()
                 ->log()->info()->b()
-                ->desc()->isInvalid('Authentication Data')->b()
+                ->desc()->areInvalid('Authentication Data')->b()
                 ->fill();
         }
     }
