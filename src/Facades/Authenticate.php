@@ -27,9 +27,9 @@ class Authenticate
 
     public function __construct()
     {
-        $this->connectionName = env('LV_MSVC_AUTH_CONNECTION_NAME', 'auth');
-        $this->usersTable = env('LV_MSVC_AUTH_USERS_TABLE', 'users');
-        $this->cookieKey = env('LV_MSVC_AUTH_COOKIE_KEY', 'au');
+        $this->connectionName = config('msvc.auth.connection_name', 'auth');
+        $this->usersTable = config('msvc.auth.users_table', 'users');
+        $this->cookieKey = config('msvc.auth.cookie_key', 'au');
 
         $this->connection = DB::connection($this->connectionName);
     }
@@ -71,7 +71,7 @@ class Authenticate
     /**
      * @throws UniException
      */
-    protected function makeAuthenticator($password, $username, $email, $token, $cookie)
+    protected function makeAuthenticator($password, $username, $email, $token, $cookie): void
     {
         if (!empty($token)) {
             $this->authenticator = new AuthByToken(

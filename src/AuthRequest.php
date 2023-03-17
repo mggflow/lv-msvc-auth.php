@@ -16,7 +16,7 @@ class AuthRequest
 
     public function __construct()
     {
-        $this->authHeaderName = env('LV_MSVC_AUTH_TOKEN_HEADER_NAME', 'Auth-Access-Token');
+        $this->authHeaderName = config('msvc.auth.token_header_name', 'Auth-Access-Token');;
 
         $this->authenticateFacade = new Authenticate();
     }

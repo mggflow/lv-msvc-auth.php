@@ -34,6 +34,15 @@ Don`t forget to add database settings to ``config/database.php``:
     ]) : [],
 ],
 ```
+And auth settings to ``config/msvc.php``:
+```
+'auth' => [
+    'connection_name' => env('LV_MSVC_AUTH_CONNECTION_NAME', 'auth'),
+    'users_table' => env('LV_MSVC_AUTH_USERS_TABLE', 'users'),
+    'cookie_key' => env('LV_MSVC_AUTH_COOKIE_KEY', 'au'),
+    'token_header_name' => env('LV_MSVC_AUTH_TOKEN_HEADER_NAME', 'Auth-Access-Token'),
+]
+```
 
 Env:
 ```
